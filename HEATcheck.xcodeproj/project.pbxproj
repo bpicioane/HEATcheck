@@ -3,18 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		313C79E12577EC0F0065A399 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313C79E02577EC0F0065A399 /* ScannerViewController.swift */; };
+		3140CD5C25771F9C0094B921 /* Shoe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3140CD5B25771F9C0094B921 /* Shoe.swift */; };
+		3140CD64257720ED0094B921 /* Shoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3140CD63257720ED0094B921 /* Shoes.swift */; };
+		3140CD89257722DF0094B921 /* UPC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3140CD88257722DF0094B921 /* UPC.swift */; };
+		3140CDAE2577233E0094B921 /* UPCItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3140CDAD2577233E0094B921 /* UPCItem.swift */; };
+		3140CDB3257724470094B921 /* ShoeLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3140CDB2257724470094B921 /* ShoeLibraryViewController.swift */; };
 		31A2ECB82576E9F500622B9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A2ECB72576E9F500622B9F /* AppDelegate.swift */; };
 		31A2ECBA2576E9F500622B9F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A2ECB92576E9F500622B9F /* SceneDelegate.swift */; };
-		31A2ECBC2576E9F500622B9F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A2ECBB2576E9F500622B9F /* ViewController.swift */; };
+		31A2ECBC2576E9F500622B9F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A2ECBB2576E9F500622B9F /* LoginViewController.swift */; };
 		31A2ECBF2576E9F500622B9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31A2ECBD2576E9F500622B9F /* Main.storyboard */; };
 		31A2ECC12576E9F700622B9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31A2ECC02576E9F700622B9F /* Assets.xcassets */; };
 		31A2ECC42576E9F700622B9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31A2ECC22576E9F700622B9F /* LaunchScreen.storyboard */; };
 		31A2ECCF2576E9F800622B9F /* HEATcheckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A2ECCE2576E9F800622B9F /* HEATcheckTests.swift */; };
 		31A2ECDA2576E9F800622B9F /* HEATcheckUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A2ECD92576E9F800622B9F /* HEATcheckUITests.swift */; };
+		31A2ED0E2576F02200622B9F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 31A2ED0D2576F02200622B9F /* GoogleService-Info.plist */; };
+		77CE0F083C5FB753A9ECE203 /* Pods_HEATcheck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B157B8BAB59DC54C7241B50A /* Pods_HEATcheck.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +43,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		14101F02FE358194649E8CC0 /* Pods-HEATcheck.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HEATcheck.debug.xcconfig"; path = "Target Support Files/Pods-HEATcheck/Pods-HEATcheck.debug.xcconfig"; sourceTree = "<group>"; };
+		313C79E02577EC0F0065A399 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
+		3140CD5B25771F9C0094B921 /* Shoe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shoe.swift; sourceTree = "<group>"; };
+		3140CD63257720ED0094B921 /* Shoes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shoes.swift; sourceTree = "<group>"; };
+		3140CD88257722DF0094B921 /* UPC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPC.swift; sourceTree = "<group>"; };
+		3140CDAD2577233E0094B921 /* UPCItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPCItem.swift; sourceTree = "<group>"; };
+		3140CDB2257724470094B921 /* ShoeLibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeLibraryViewController.swift; sourceTree = "<group>"; };
 		31A2ECB42576E9F500622B9F /* HEATcheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HEATcheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31A2ECB72576E9F500622B9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31A2ECB92576E9F500622B9F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		31A2ECBB2576E9F500622B9F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		31A2ECBB2576E9F500622B9F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		31A2ECBE2576E9F500622B9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		31A2ECC02576E9F700622B9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		31A2ECC32576E9F700622B9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +64,9 @@
 		31A2ECD52576E9F800622B9F /* HEATcheckUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HEATcheckUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31A2ECD92576E9F800622B9F /* HEATcheckUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HEATcheckUITests.swift; sourceTree = "<group>"; };
 		31A2ECDB2576E9F800622B9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31A2ED0D2576F02200622B9F /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		A0D93541CC629A110847C50B /* Pods-HEATcheck.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HEATcheck.release.xcconfig"; path = "Target Support Files/Pods-HEATcheck/Pods-HEATcheck.release.xcconfig"; sourceTree = "<group>"; };
+		B157B8BAB59DC54C7241B50A /* Pods_HEATcheck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HEATcheck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77CE0F083C5FB753A9ECE203 /* Pods_HEATcheck.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +95,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23431330E2129B3E875B60FE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				14101F02FE358194649E8CC0 /* Pods-HEATcheck.debug.xcconfig */,
+				A0D93541CC629A110847C50B /* Pods-HEATcheck.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		31A2ECAB2576E9F500622B9F = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +111,8 @@
 				31A2ECCD2576E9F800622B9F /* HEATcheckTests */,
 				31A2ECD82576E9F800622B9F /* HEATcheckUITests */,
 				31A2ECB52576E9F500622B9F /* Products */,
+				23431330E2129B3E875B60FE /* Pods */,
+				B518CE7677BD2780C5CFE3A0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,11 +131,18 @@
 			children = (
 				31A2ECB72576E9F500622B9F /* AppDelegate.swift */,
 				31A2ECB92576E9F500622B9F /* SceneDelegate.swift */,
-				31A2ECBB2576E9F500622B9F /* ViewController.swift */,
+				3140CDAD2577233E0094B921 /* UPCItem.swift */,
+				3140CD88257722DF0094B921 /* UPC.swift */,
+				3140CD5B25771F9C0094B921 /* Shoe.swift */,
+				3140CD63257720ED0094B921 /* Shoes.swift */,
+				31A2ECBB2576E9F500622B9F /* LoginViewController.swift */,
+				3140CDB2257724470094B921 /* ShoeLibraryViewController.swift */,
+				313C79E02577EC0F0065A399 /* ScannerViewController.swift */,
 				31A2ECBD2576E9F500622B9F /* Main.storyboard */,
 				31A2ECC02576E9F700622B9F /* Assets.xcassets */,
 				31A2ECC22576E9F700622B9F /* LaunchScreen.storyboard */,
 				31A2ECC52576E9F700622B9F /* Info.plist */,
+				31A2ED0D2576F02200622B9F /* GoogleService-Info.plist */,
 			);
 			path = HEATcheck;
 			sourceTree = "<group>";
@@ -128,6 +165,14 @@
 			path = HEATcheckUITests;
 			sourceTree = "<group>";
 		};
+		B518CE7677BD2780C5CFE3A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B157B8BAB59DC54C7241B50A /* Pods_HEATcheck.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +180,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 31A2ECDE2576E9F800622B9F /* Build configuration list for PBXNativeTarget "HEATcheck" */;
 			buildPhases = (
+				F7DCAEE0B31B92ADA98000AA /* [CP] Check Pods Manifest.lock */,
 				31A2ECB02576E9F500622B9F /* Sources */,
 				31A2ECB12576E9F500622B9F /* Frameworks */,
 				31A2ECB22576E9F500622B9F /* Resources */,
+				36E235EF1EC68BAACEA9889E /* [CP] Embed Pods Frameworks */,
+				796A444A4114A1DC7E99167D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -232,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31A2ECC42576E9F700622B9F /* LaunchScreen.storyboard in Resources */,
+				31A2ED0E2576F02200622B9F /* GoogleService-Info.plist in Resources */,
 				31A2ECC12576E9F700622B9F /* Assets.xcassets in Resources */,
 				31A2ECBF2576E9F500622B9F /* Main.storyboard in Resources */,
 			);
@@ -253,13 +302,78 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		36E235EF1EC68BAACEA9889E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HEATcheck/Pods-HEATcheck-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HEATcheck/Pods-HEATcheck-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HEATcheck/Pods-HEATcheck-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		796A444A4114A1DC7E99167D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HEATcheck/Pods-HEATcheck-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HEATcheck/Pods-HEATcheck-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HEATcheck/Pods-HEATcheck-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7DCAEE0B31B92ADA98000AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HEATcheck-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		31A2ECB02576E9F500622B9F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31A2ECBC2576E9F500622B9F /* ViewController.swift in Sources */,
+				31A2ECBC2576E9F500622B9F /* LoginViewController.swift in Sources */,
 				31A2ECB82576E9F500622B9F /* AppDelegate.swift in Sources */,
+				3140CDAE2577233E0094B921 /* UPCItem.swift in Sources */,
+				3140CD89257722DF0094B921 /* UPC.swift in Sources */,
+				313C79E12577EC0F0065A399 /* ScannerViewController.swift in Sources */,
+				3140CD64257720ED0094B921 /* Shoes.swift in Sources */,
+				3140CDB3257724470094B921 /* ShoeLibraryViewController.swift in Sources */,
+				3140CD5C25771F9C0094B921 /* Shoe.swift in Sources */,
 				31A2ECBA2576E9F500622B9F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,6 +547,7 @@
 		};
 		31A2ECDF2576E9F800622B9F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14101F02FE358194649E8CC0 /* Pods-HEATcheck.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -452,6 +567,7 @@
 		};
 		31A2ECE02576E9F800622B9F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0D93541CC629A110847C50B /* Pods-HEATcheck.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

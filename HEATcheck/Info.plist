@@ -75,5 +75,7 @@
 	</array>
 	<key>NSCameraUsageDescription</key>
 	<string>Enable the camera to allow for barcode scanning.</string>
+	<key>FirebaseAutomaticScreenReportingEnabled</key>
+	<false/>
 </dict>
 </plist>

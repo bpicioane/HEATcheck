@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		313C79E12577EC0F0065A399 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313C79E02577EC0F0065A399 /* ScannerViewController.swift */; };
+		313C7A062577F9C50065A399 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313C7A052577F9C50065A399 /* SearchViewController.swift */; };
 		3140CD5C25771F9C0094B921 /* Shoe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3140CD5B25771F9C0094B921 /* Shoe.swift */; };
 		3140CD64257720ED0094B921 /* Shoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3140CD63257720ED0094B921 /* Shoes.swift */; };
 		3140CD89257722DF0094B921 /* UPC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3140CD88257722DF0094B921 /* UPC.swift */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		14101F02FE358194649E8CC0 /* Pods-HEATcheck.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HEATcheck.debug.xcconfig"; path = "Target Support Files/Pods-HEATcheck/Pods-HEATcheck.debug.xcconfig"; sourceTree = "<group>"; };
 		313C79E02577EC0F0065A399 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
+		313C7A052577F9C50065A399 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		3140CD5B25771F9C0094B921 /* Shoe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shoe.swift; sourceTree = "<group>"; };
 		3140CD63257720ED0094B921 /* Shoes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shoes.swift; sourceTree = "<group>"; };
 		3140CD88257722DF0094B921 /* UPC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPC.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				31A2ECBB2576E9F500622B9F /* LoginViewController.swift */,
 				3140CDB2257724470094B921 /* ShoeLibraryViewController.swift */,
 				313C79E02577EC0F0065A399 /* ScannerViewController.swift */,
+				313C7A052577F9C50065A399 /* SearchViewController.swift */,
 				31A2ECBD2576E9F500622B9F /* Main.storyboard */,
 				31A2ECC02576E9F700622B9F /* Assets.xcassets */,
 				31A2ECC22576E9F700622B9F /* LaunchScreen.storyboard */,
@@ -366,6 +369,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				313C7A062577F9C50065A399 /* SearchViewController.swift in Sources */,
 				31A2ECBC2576E9F500622B9F /* LoginViewController.swift in Sources */,
 				31A2ECB82576E9F500622B9F /* AppDelegate.swift in Sources */,
 				3140CDAE2577233E0094B921 /* UPCItem.swift in Sources */,

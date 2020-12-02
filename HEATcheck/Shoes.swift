@@ -12,7 +12,5 @@ class Shoes {
     var name = ""
     var shoeArray: [Shoe] = []
     
-    func getName() {
-        
-    }
+    
 }

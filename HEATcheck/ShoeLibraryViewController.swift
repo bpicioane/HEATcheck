@@ -38,7 +38,7 @@ extension ShoeLibraryViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.textLabel!.text = shoe.title
-        cell.detailTextLabel!.text = "\(shoe.retailPrice)"
+        cell.detailTextLabel!.text = "$\(shoe.retailPrice)"
         return cell
     }
     

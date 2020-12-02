@@ -12,7 +12,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
     
-    var code: String!
+    var code = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,19 +89,19 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
             code = stringValue
             found(code: stringValue)
         }
-        dismiss(animated: true)
+        //dismiss(animated: true)
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let destination = segue.destination as! DisplayViewController
-//        destination.shoe = code
-//        code = ""
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as! SearchViewController
+        destination.name = code
+        code = ""
+    }
 
     func found(code: String) {
         print(code)
-//        performSegue(withIdentifier: "ShowDetail", sender: nil)
-//        self.code = ""
+        performSegue(withIdentifier: "ShowSearch", sender: nil)
+        self.code = ""
     }
     
     

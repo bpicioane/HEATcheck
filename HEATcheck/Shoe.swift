@@ -12,6 +12,7 @@ struct Shoe: Codable {
     var brand: String
     var retailPrice: Int
     var title: String
+    var year: Int
     var media: [String: String]
 
 }

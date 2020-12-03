@@ -11,7 +11,7 @@ class ShoeLibraryViewController: UIViewController {
     
     //var shoes: Shoes!
     
-    var shoe = Shoe(brand: "adidas", retailPrice: 250, title: "yeezy", media: ["":""])
+    var shoe = Shoe(brand: "adidas", retailPrice: 250, title: "yeezy", year: 2020, media: ["":""])
 
     @IBOutlet weak var tableView: UITableView!
     

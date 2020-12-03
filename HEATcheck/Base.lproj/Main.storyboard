@@ -63,6 +63,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="L1S-9q-5La" kind="presentation" id="P2o-gq-ksn"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -152,6 +155,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="bxW-lC-3VZ" kind="show" id="QvJ-h8-dLI"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -195,6 +201,22 @@
             </objects>
             <point key="canvasLocation" x="3892.753623188406" y="93.75"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="7Nb-0j-IpR">
+            <objects>
+                <viewController id="bxW-lC-3VZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zCs-S7-lcY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="hFe-zF-SHb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="9I5-4v-MBa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dcb-9X-lcj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4964" y="94"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="L2d-XE-dvT">
             <objects>
@@ -213,10 +235,32 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YQ4-Tw-68I">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="L1S-9q-5La" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="srH-m0-Bw1"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Usf-5w-7bq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bxW-lC-3VZ" kind="relationship" relationship="rootViewController" id="vc3-up-gkp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5m1-iU-a5l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3430" y="-788"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="vc3-up-gkp"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <namedColor name="themeColor">
-            <color red="0.99774199720000001" green="0.79618602989999998" blue="0.79607325790000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.99800002574920654" green="0.79600000381469727" blue="0.79600000381469727" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

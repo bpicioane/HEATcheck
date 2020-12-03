@@ -45,7 +45,12 @@ class SearchViewController: UIViewController {
     }
     
     @IBAction func searchButtonPressed(_ sender: UIButton) {
-        
+        shoes.name = searchField.text ?? ""
+        shoes.getData {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
     }
     
 

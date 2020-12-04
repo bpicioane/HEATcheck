@@ -40,6 +40,7 @@ class Shoes {
 //                }
             } catch {
                 print("L. JSON error.")
+                self.shoeArray.append(Shoe(brand: "", retailPrice: 0, title: "no shoes found", year: 2000, media: ["":""]))
             }
             completed()
         }

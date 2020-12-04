@@ -51,9 +51,18 @@ class SearchViewController: UIViewController {
         shoes.name = searchField.text ?? ""
         shoes.getData {
             DispatchQueue.main.async {
+                if self.shoes.shoeArray.isEmpty {
+                    self.shoes.shoeArray.append(Shoe(brand: "", retailPrice: 0, title: "no shoes found", year: 2000, media: ["":""]))
+                }
                 self.tableView.reloadData()
             }
         }
+        print("got here")
+//        if shoes.shoeArray.isEmpty {
+//            shoes.shoeArray.append(Shoe(brand: "", retailPrice: 0, title: "no shoes found", year: 2000, media: ["":""]))
+//        }
+        //print(shoes.shoeArray[1].title)
+        //tableView.reloadData()
     }
     
 

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Shoe: Codable {
+struct Shoe: Codable, Equatable {
     
     var brand: String
     var retailPrice: Int

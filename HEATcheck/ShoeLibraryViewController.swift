@@ -9,7 +9,7 @@ import UIKit
 
 class ShoeLibraryViewController: UIViewController {
     
-    //var shoes: Shoes!
+    var shoes: Shoes!
     
     var shoe = Shoe(brand: "adidas", retailPrice: 250, title: "yeezy", year: 2020, media: ["":""])
 
@@ -17,6 +17,9 @@ class ShoeLibraryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        shoes = Shoes()
+        shoes.shoeArray.append(shoe)
 
         tableView.dataSource = self
         tableView.delegate = self
@@ -27,18 +30,27 @@ class ShoeLibraryViewController: UIViewController {
 //            print(yeezy.title)
 //        }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowDetailFromLibrary" {
+            let destination = segue.destination as! ShoeDetailViewController
+            let selectedIndexPath = tableView.indexPathForSelectedRow!
+            //print(shoes.shoeArray[selectedIndexPath.row])
+            destination.shoe = shoes.shoeArray[selectedIndexPath.row]
+        }
+    }
 
 }
 
 extension ShoeLibraryViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return shoes.shoeArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel!.text = shoe.title
-        cell.detailTextLabel!.text = "$\(shoe.retailPrice)"
+        cell.textLabel!.text = shoes.shoeArray[indexPath.row].title
+        cell.detailTextLabel!.text = "$\(shoes.shoeArray[indexPath.row].retailPrice)"
         return cell
     }
     

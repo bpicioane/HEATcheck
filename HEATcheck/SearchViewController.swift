@@ -37,10 +37,13 @@ class SearchViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         searchField.text = name
-        
-        
-        
-        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as! ShoeDetailViewController
+        let selectedIndexPath = tableView.indexPathForSelectedRow!
+        //print(shoes.shoeArray[selectedIndexPath.row])
+        destination.shoe = shoes.shoeArray[selectedIndexPath.row]
         
     }
     

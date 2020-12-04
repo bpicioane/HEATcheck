@@ -15,6 +15,8 @@ class ShoeDetailViewController: UIViewController {
     @IBOutlet weak var yearLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     
+    
+    
     var shoe: Shoe!
 
     override func viewDidLoad() {
@@ -22,7 +24,7 @@ class ShoeDetailViewController: UIViewController {
         if shoe == nil {
             shoe = Shoe(brand: "", retailPrice: 1, title: "didn't work", year: 1, media: ["":""])
         }
-        print(shoe)
+        //print(shoe)
         nameLabel.text = shoe.title
         brandLabel.text = shoe.brand
         yearLabel.text = "\(shoe.year)"
@@ -44,9 +46,23 @@ class ShoeDetailViewController: UIViewController {
         } catch {
             print("ERROR: error thrown trying to get image from url \(url)")
         }
-        
-        
+
+    }
+    
+//    func dismissViewControllers() {
+//
+//        guard let vc = self.presentingViewController else { return }
+//
+//        while (vc.presentingViewController != nil) {
+//            vc.dismiss(animated: true, completion: nil)
+//        }
+//    }
+    
+    @IBAction func backToHomeButtonPressed(_ sender: UIButton) {
+        //dismissViewControllers()
+        self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
         
     }
+    
 
 }

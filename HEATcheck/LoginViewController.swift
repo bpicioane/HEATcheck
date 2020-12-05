@@ -39,15 +39,15 @@ class LoginViewController: UIViewController {
                 print("L. Couldn't get current user.")
                 return
             }
-//            let shoeUser = ShoeUser(user: currentUser)
-//            shoeUser.saveIfNewUser { (success) in
-//                if success {
-//                    self.performSegue(withIdentifier: "FirstShowSegue", sender: nil)
-//                } else {
-//                    print("L. tried to save new user but failed.")
-//                }
-//            }
-            performSegue(withIdentifier: "FirstShowSegue", sender: nil)
+            let shoeUser = ShoeUser(user: currentUser)
+            shoeUser.saveIfNewUser { (success) in
+                if success {
+                    self.performSegue(withIdentifier: "FirstShowSegue", sender: nil)
+                } else {
+                    print("L. tried to save new user but failed.")
+                }
+            }
+            //performSegue(withIdentifier: "FirstShowSegue", sender: nil)
         }
     }
     

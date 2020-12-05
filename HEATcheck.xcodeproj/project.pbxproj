@@ -25,6 +25,7 @@
 		31A2ECCF2576E9F800622B9F /* HEATcheckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A2ECCE2576E9F800622B9F /* HEATcheckTests.swift */; };
 		31A2ECDA2576E9F800622B9F /* HEATcheckUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A2ECD92576E9F800622B9F /* HEATcheckUITests.swift */; };
 		31A2ED0E2576F02200622B9F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 31A2ED0D2576F02200622B9F /* GoogleService-Info.plist */; };
+		31F78260257C33F30080958B /* SavedShoe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F7825F257C33F30080958B /* SavedShoe.swift */; };
 		77CE0F083C5FB753A9ECE203 /* Pods_HEATcheck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B157B8BAB59DC54C7241B50A /* Pods_HEATcheck.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		31A2ECD92576E9F800622B9F /* HEATcheckUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HEATcheckUITests.swift; sourceTree = "<group>"; };
 		31A2ECDB2576E9F800622B9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31A2ED0D2576F02200622B9F /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		31F7825F257C33F30080958B /* SavedShoe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedShoe.swift; sourceTree = "<group>"; };
 		A0D93541CC629A110847C50B /* Pods-HEATcheck.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HEATcheck.release.xcconfig"; path = "Target Support Files/Pods-HEATcheck/Pods-HEATcheck.release.xcconfig"; sourceTree = "<group>"; };
 		B157B8BAB59DC54C7241B50A /* Pods_HEATcheck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HEATcheck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -141,6 +143,7 @@
 				3140CDAD2577233E0094B921 /* UPCItem.swift */,
 				3140CD88257722DF0094B921 /* UPC.swift */,
 				3140CD5B25771F9C0094B921 /* Shoe.swift */,
+				31F7825F257C33F30080958B /* SavedShoe.swift */,
 				3140CD63257720ED0094B921 /* Shoes.swift */,
 				31A2ECBB2576E9F500622B9F /* LoginViewController.swift */,
 				3140CDB2257724470094B921 /* ShoeLibraryViewController.swift */,
@@ -377,6 +380,7 @@
 			files = (
 				313C7A062577F9C50065A399 /* SearchViewController.swift in Sources */,
 				31A2ECBC2576E9F500622B9F /* LoginViewController.swift in Sources */,
+				31F78260257C33F30080958B /* SavedShoe.swift in Sources */,
 				31A2ECB82576E9F500622B9F /* AppDelegate.swift in Sources */,
 				3140CDAE2577233E0094B921 /* UPCItem.swift in Sources */,
 				3140CD89257722DF0094B921 /* UPC.swift in Sources */,

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ShoeDetailViewController: UIViewController {
     
@@ -14,6 +15,7 @@ class ShoeDetailViewController: UIViewController {
     @IBOutlet weak var brandLabel: UILabel!
     @IBOutlet weak var yearLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var backToHomeButton: UIButton!
     
     
     
@@ -21,12 +23,15 @@ class ShoeDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        if (presentingViewController is UINavigationController) {
+            backToHomeButton.isHidden = true
+        }
         if shoe == nil {
             shoe = Shoe(brand: "", retailPrice: 1, title: "didn't work", year: 1, media: ["":""])
         }
         //print(shoe)
-        nameLabel.text = shoe.title
-        brandLabel.text = shoe.brand
+        nameLabel.text = shoe.title.lowercased()
+        brandLabel.text = shoe.brand.lowercased()
         yearLabel.text = "\(shoe.year)"
         priceLabel.text = "$\(shoe.retailPrice)"
         
@@ -42,7 +47,11 @@ class ShoeDetailViewController: UIViewController {
                 
         do {
             let data = try Data(contentsOf: url)
-            shoeImageView.image = UIImage(data: data)
+            let image = UIImage(data: data)
+            let colorMasking: [CGFloat] = [222.0,255.0,222.0,255.0,222.0,255.0]
+            //let imageRef = 
+            
+            shoeImageView.image = image
         } catch {
             print("ERROR: error thrown trying to get image from url \(url)")
         }
@@ -60,9 +69,21 @@ class ShoeDetailViewController: UIViewController {
     
     @IBAction func backToHomeButtonPressed(_ sender: UIButton) {
         //dismissViewControllers()
-        self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
-        
-    }
-    
+        if !(presentingViewController is UINavigationController) {
+            let savedShoe = SavedShoe()
+            savedShoe.brand = shoe.brand
+            savedShoe.retailPrice = shoe.retailPrice
+            savedShoe.title = shoe.title
+            savedShoe.media = shoe.media
+            savedShoe.year = shoe.year
 
+            savedShoe.saveData { (success) in
+                if success {
+                    self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
+                } else {
+                    print("save didnt work. L")
+                }
+            }
+        }
+    }
 }

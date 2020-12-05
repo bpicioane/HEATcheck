@@ -6,12 +6,16 @@
 //
 
 import UIKit
+import Firebase
 
 class ShoeLibraryViewController: UIViewController {
     
     var shoes: Shoes!
     
-    var shoe = Shoe(brand: "adidas", retailPrice: 250, title: "yeezy", year: 2020, media: ["":""])
+    //var shoe: Shoe!
+    //var currentUser = Auth.auth().currentUser?.uid
+    
+    //var shoe = Shoe(brand: "adidas", retailPrice: 250, title: "yeezy", year: 2020, media: ["":""])
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -19,10 +23,15 @@ class ShoeLibraryViewController: UIViewController {
         super.viewDidLoad()
         
         shoes = Shoes()
-        shoes.shoeArray.append(shoe)
+        //shoes.shoeArray.append(shoe)
 
         tableView.dataSource = self
         tableView.delegate = self
+        
+        shoes.loadData {
+            self.tableView.reloadData()
+        }
+        
         
 //        var yeezy = UPC()
 //        yeezy.upc = "0194816598148"
@@ -30,6 +39,8 @@ class ShoeLibraryViewController: UIViewController {
 //            print(yeezy.title)
 //        }
     }
+    
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowDetailFromLibrary" {
@@ -49,7 +60,7 @@ extension ShoeLibraryViewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel!.text = shoes.shoeArray[indexPath.row].title
+        cell.textLabel!.text = shoes.shoeArray[indexPath.row].title.lowercased()
         cell.detailTextLabel!.text = "$\(shoes.shoeArray[indexPath.row].retailPrice)"
         return cell
     }

@@ -6,14 +6,20 @@
 //
 
 import Foundation
+import Firebase
 
 class Shoes {
     
     var name = ""
     var shoeArray: [Shoe] = []
+    var db: Firestore!
     
     private struct Returned: Codable {
         var results: [Shoe]
+    }
+    
+    init() {
+        db = Firestore.firestore()
     }
     
     var urlString = "https://api.thesneakerdatabase.com/v1/sneakers?limit=10&sort=retailPrice:desc&name="
@@ -45,6 +51,26 @@ class Shoes {
             completed()
         }
         task.resume()
+    }
+    
+    func loadData(completed: @escaping () -> ()) {
+        guard let postingUserID = Auth.auth().currentUser?.uid else {
+            print("L. Don't have a valid posting user ID.")
+            return completed()
+        }
+        db.collection("users").document(postingUserID).collection("shoes").addSnapshotListener { (querySnapshot, error) in
+            guard error == nil else {
+                print("L. Couldn't add snapshot listener \(error!.localizedDescription)")
+                return completed()
+            }
+            self.shoeArray = []
+            for document in querySnapshot!.documents {
+                let shoe = SavedShoe(dictionary: document.data())
+                shoe.documentID = document.documentID
+                self.shoeArray.append(Shoe(brand: shoe.brand, retailPrice: shoe.retailPrice, title: shoe.title, year: shoe.year, media: shoe.media))
+            }
+            completed()
+        }
     }
     
     

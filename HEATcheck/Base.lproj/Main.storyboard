@@ -48,9 +48,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="shoe name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gxX-l4-c81">
-                                                    <rect key="frame" x="20" y="13" width="108.5" height="20"/>
+                                                    <rect key="frame" x="20" y="18" width="76" height="14"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -64,7 +64,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="bxW-lC-3VZ" kind="presentation" identifier="ShowDetailFromLibrary" id="2EP-Ai-oNM"/>
+                                            <segue destination="bxW-lC-3VZ" kind="presentation" identifier="ShowDetailFromLibrary" id="8Ir-5f-nVa"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -87,7 +87,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="awT-af-aon">
                             <connections>
-                                <segue destination="xI6-T0-sz8" kind="show" identifier="ScanBarcode" id="cpJ-uJ-xgG"/>
+                                <segue destination="obw-MJ-CqV" kind="show" identifier="ScanBarcode" id="YOR-6u-reN"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -120,7 +120,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kd7-jW-dob" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2916" y="518"/>
+            <point key="canvasLocation" x="5057.971014492754" y="489.50892857142856"/>
         </scene>
         <!--Pick Your Shoe!-->
         <scene sceneID="oTE-QJ-t3L">
@@ -156,7 +156,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="bxW-lC-3VZ" kind="presentation" identifier="ShowDetailFromSearch" id="QvJ-h8-dLI"/>
+                                            <segue destination="bxW-lC-3VZ" kind="presentation" identifier="ShowDetailFromSearch" id="jHi-TZ-COa"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -196,7 +196,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v6H-DJ-7F7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3896" y="518"/>
+            <point key="canvasLocation" x="6000.0000000000009" y="489.50892857142856"/>
         </scene>
         <!--Details-->
         <scene sceneID="7Nb-0j-IpR">
@@ -283,7 +283,7 @@
                                 <color key="backgroundColor" name="themeColor"/>
                                 <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="50"/>
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="back to scan"/>
+                                <state key="normal" title="back to home"/>
                                 <connections>
                                     <action selector="backToHomeButtonPressed:" destination="bxW-lC-3VZ" eventType="touchUpInside" id="udF-7G-RfJ"/>
                                     <action selector="searchButtonPressed:" destination="pB0-1n-NFr" eventType="touchUpInside" id="OIf-Jb-Dot"/>
@@ -318,6 +318,7 @@
                         <barButtonItem key="leftBarButtonItem" id="8kk-fk-fIh"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="backToHomeButton" destination="mhW-9v-bNv" id="KoM-ls-B7u"/>
                         <outlet property="brandLabel" destination="C3J-o2-aDO" id="yrC-Vu-ixg"/>
                         <outlet property="nameLabel" destination="0Fe-M4-o3i" id="yCp-Qq-k5w"/>
                         <outlet property="priceLabel" destination="cNw-oz-7cY" id="coB-ci-9Lf"/>
@@ -327,7 +328,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dcb-9X-lcj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4962.3188405797109" y="93.75"/>
+            <point key="canvasLocation" x="7692.753623188406" y="93.75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="L2d-XE-dvT">
@@ -349,9 +350,30 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ect-vG-iwG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="obw-MJ-CqV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="I3c-VG-f8G"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MqV-TJ-8Pc">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" name="themeColor"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xI6-T0-sz8" kind="relationship" relationship="rootViewController" id="S8X-uY-KGk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9oh-TT-BEg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4147.826086956522" y="489.50892857142856"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="QvJ-h8-dLI"/>
+        <segue reference="8Ir-5f-nVa"/>
     </inferredMetricsTieBreakers>
     <resources>
         <namedColor name="themeColor">

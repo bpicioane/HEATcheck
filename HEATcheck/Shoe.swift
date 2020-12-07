@@ -13,6 +13,6 @@ struct Shoe: Codable, Equatable {
     var retailPrice: Int
     var title: String
     var year: Int
-    var media: [String: String]
+    var media: [String: String?]
 
 }

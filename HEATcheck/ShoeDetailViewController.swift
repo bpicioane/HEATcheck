@@ -35,11 +35,11 @@ class ShoeDetailViewController: UIViewController {
         yearLabel.text = "\(shoe.year)"
         priceLabel.text = "$\(shoe.retailPrice)"
         
-        guard let imageURLString = shoe.media["imageUrl"] else {
+        guard let imageURLString = shoe.media["imageUrl"] ?? "" else {
             print("image url isn't working. L")
             return
         }
-        
+
         guard let url = URL(string: imageURLString) else {
             print("Couldn't get a valid URL from \(imageURLString)")
             return
@@ -47,10 +47,10 @@ class ShoeDetailViewController: UIViewController {
                 
         do {
             let data = try Data(contentsOf: url)
-            let image = UIImage(data: data)
-            let colorMasking: [CGFloat] = [222.0,255.0,222.0,255.0,222.0,255.0]
-            //let imageRef = 
-            
+            var image = UIImage(data: data)
+//            let colorMasking: [CGFloat] = [222.0,255.0,222.0,255.0,222.0,255.0]
+//            let imageRef = image?.cgImage!.copy(maskingColorComponents: colorMasking)
+//            image = UIImage(cgImage: imageRef!) ?? UIImage()
             shoeImageView.image = image
         } catch {
             print("ERROR: error thrown trying to get image from url \(url)")

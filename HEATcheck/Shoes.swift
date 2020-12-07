@@ -30,10 +30,11 @@ class Shoes {
             completed()
             return
         }
+        print("\(urlString)\(name.replacingOccurrences(of: " ", with: "%20"))")
         let session = URLSession.shared
         let task = session.dataTask(with: url) { (data, response, error) in
             if let error = error {
-                print("L. url session broke.")
+                print("L. url session broke. ")
             }
             do {
                 let returned = try JSONDecoder().decode(Returned.self, from: data!)
@@ -45,8 +46,8 @@ class Shoes {
 //                    print("Barcode not in API.")
 //                }
             } catch {
-                print("L. JSON error.")
-                self.shoeArray.append(Shoe(brand: "", retailPrice: 0, title: "no shoes found", year: 2000, media: ["":""]))
+                print("L. JSON error. \(error.localizedDescription)")
+                //self.shoeArray.append(Shoe(brand: "", retailPrice: 0, title: "no shoes found", year: 2000, media: ["":""]))
             }
             completed()
         }

@@ -14,7 +14,7 @@ class SavedShoe {
     var retailPrice: Int
     var title: String
     var year: Int
-    var media: [String: String]
+    var media: [String: String?]
     var postingUserID: String
     var documentID: String
     
@@ -22,7 +22,7 @@ class SavedShoe {
         return ["brand" : brand, "retailPrice" : retailPrice, "title" : title, "year" : year, "media" : media, "postingUserID" : postingUserID]
     }
     
-    init(brand: String, retailPrice: Int, title: String, year: Int, media: [String: String], postingUserID: String, documentID: String) {
+    init(brand: String, retailPrice: Int, title: String, year: Int, media: [String: String?], postingUserID: String, documentID: String) {
         self.brand = brand
         self.retailPrice = retailPrice
         self.title = title
@@ -42,7 +42,7 @@ class SavedShoe {
         let title = dictionary["title"] as! String? ?? ""
         let year = dictionary["year"] as! Int? ?? 0
         let postingUserID = dictionary["postingUserID"] as! String? ?? ""
-        let media = dictionary["media"] as! [String: String]? ?? ["":""]
+        let media = dictionary["media"] as! [String: String?]? ?? ["":""]
         self.init(brand: brand, retailPrice: retailPrice, title: title, year: year, media: media, postingUserID: postingUserID, documentID: "")
     }
     

@@ -37,6 +37,10 @@ class SearchViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         searchField.text = name
+        
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -49,10 +53,12 @@ class SearchViewController: UIViewController {
     
     @IBAction func searchButtonPressed(_ sender: UIButton) {
         shoes.name = searchField.text ?? ""
+        print(shoes.name)
         shoes.getData {
             DispatchQueue.main.async {
-                if self.shoes.shoeArray.isEmpty {
-                    self.shoes.shoeArray.append(Shoe(brand: "", retailPrice: 0, title: "no shoes found", year: 2000, media: ["":""]))
+                if self.shoes.shoeArray.count == 1 || self.shoes.shoeArray.isEmpty {
+                    self.shoes.shoeArray = [Shoe(brand: "", retailPrice: 0, title: "no shoes found", year: 2000, media: ["":""])]
+                    //self.shoes.shoeArray.append()
                 }
                 self.tableView.reloadData()
             }
@@ -76,6 +82,14 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.textLabel!.text = shoes.shoeArray[indexPath.row].title
+        if shoes.shoeArray[indexPath.row].title == "no shoes found" {
+            cell.isUserInteractionEnabled = false
+            if indexPath.row > 0 {
+                cell.textLabel!.text = ""
+            }
+        } else {
+            cell.isUserInteractionEnabled = true
+        }
         return cell
     }
     

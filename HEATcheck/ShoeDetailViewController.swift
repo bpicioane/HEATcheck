@@ -17,14 +17,15 @@ class ShoeDetailViewController: UIViewController {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var backToHomeButton: UIButton!
     
-    
-    
     var shoe: Shoe!
+    
+    var titles = ["those shoes are fire!", "where can I get a pair?", "the colorway is heat!"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         if (presentingViewController is UINavigationController) {
             backToHomeButton.isHidden = true
+            navigationItem.title = titles.randomElement()!
         }
         if shoe == nil {
             shoe = Shoe(brand: "", retailPrice: 1, title: "didn't work", year: 1, media: ["":""])

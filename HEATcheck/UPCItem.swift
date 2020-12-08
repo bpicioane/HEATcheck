@@ -8,6 +8,5 @@
 import Foundation
 
 struct UPCItem: Codable {
-    
     var title: String
 }

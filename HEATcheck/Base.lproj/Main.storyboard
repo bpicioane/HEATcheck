@@ -14,7 +14,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="HEATcheck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -64,7 +64,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="bxW-lC-3VZ" kind="presentation" identifier="ShowDetailFromLibrary" id="8Ir-5f-nVa"/>
+                                            <segue destination="bxW-lC-3VZ" kind="show" identifier="ShowDetailFromLibrary" id="8Ir-5f-nVa"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -81,7 +81,7 @@
                     </view>
                     <toolbarItems>
                         <barButtonItem style="plain" id="WZJ-NS-jKD">
-                            <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="3rE-EI-rsW">
+                            <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="3rE-EI-rsW">
                                 <rect key="frame" x="20" y="10.5" width="374" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="themeColor"/>
@@ -91,15 +91,21 @@
                                     <segment title="$ (low-high)"/>
                                 </segments>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="sortSegmentPressed:" destination="SFh-hB-XzW" eventType="valueChanged" id="1pr-NE-D1y"/>
+                                </connections>
                             </segmentedControl>
                         </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="C63-zd-6qs">
-                        <barButtonItem key="leftBarButtonItem" title="Sign Out" id="hbe-Zx-pu1">
-                            <connections>
-                                <segue destination="dUd-RM-BOr" kind="unwind" identifier="SignOutUnwind" animates="NO" unwindAction="unwindSignOutPressedWithSegue:" id="sD3-9k-1EP"/>
-                            </connections>
-                        </barButtonItem>
+                        <leftBarButtonItems>
+                            <barButtonItem title="Sign Out" id="hbe-Zx-pu1">
+                                <connections>
+                                    <segue destination="dUd-RM-BOr" kind="unwind" identifier="SignOutUnwind" animates="NO" unwindAction="unwindSignOutPressedWithSegue:" id="sD3-9k-1EP"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="person.circle.fill" catalog="system" id="egG-cj-Fss"/>
+                        </leftBarButtonItems>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="awT-af-aon">
                             <connections>
                                 <segue destination="obw-MJ-CqV" kind="show" identifier="ScanBarcode" id="YOR-6u-reN"/>
@@ -108,6 +114,7 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="sortSegmentedControl" destination="3rE-EI-rsW" id="37d-cH-vcu"/>
                         <outlet property="tableView" destination="xMs-MR-h9u" id="y0z-H9-lUM"/>
                     </connections>
                 </viewController>
@@ -116,7 +123,7 @@
             </objects>
             <point key="canvasLocation" x="2013" y="94"/>
         </scene>
-        <!--Scan Your Shoebox Here!-->
+        <!--scan your shoebox here!-->
         <scene sceneID="5X4-vQ-J45">
             <objects>
                 <viewController id="xI6-T0-sz8" customClass="ScannerViewController" customModule="HEATcheck" customModuleProvider="target" sceneMemberID="viewController">
@@ -126,7 +133,7 @@
                         <viewLayoutGuide key="safeArea" id="Zoi-8H-7Nk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Scan Your Shoebox Here!" id="thm-f5-uNv">
+                    <navigationItem key="navigationItem" title="scan your shoebox here!" id="thm-f5-uNv">
                         <barButtonItem key="rightBarButtonItem" title="Skip" id="eQ5-WZ-gvn">
                             <connections>
                                 <segue destination="pB0-1n-NFr" kind="presentation" identifier="ShowSearch" id="rHD-cy-7MI"/>
@@ -136,14 +143,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kd7-jW-dob" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5057.971014492754" y="489.50892857142856"/>
+            <point key="canvasLocation" x="3917" y="490"/>
         </scene>
         <!--Pick Your Shoe!-->
         <scene sceneID="oTE-QJ-t3L">
             <objects>
                 <viewController id="pB0-1n-NFr" customClass="SearchViewController" customModule="HEATcheck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WoW-Mm-zQm">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="shoe name here" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YLp-Jz-9MJ">
@@ -212,14 +219,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v6H-DJ-7F7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6000.0000000000009" y="489.50892857142856"/>
+            <point key="canvasLocation" x="4770" y="490"/>
         </scene>
-        <!--Details-->
+        <!--Shoe Detail View Controller-->
         <scene sceneID="7Nb-0j-IpR">
             <objects>
                 <viewController id="bxW-lC-3VZ" customClass="ShoeDetailViewController" customModule="HEATcheck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zCs-S7-lcY">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kYH-8G-iMx">
@@ -330,7 +337,7 @@
                             <constraint firstItem="kYH-8G-iMx" firstAttribute="top" secondItem="hFe-zF-SHb" secondAttribute="top" constant="15" id="woS-WP-1Qb"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Details" id="9I5-4v-MBa">
+                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="9I5-4v-MBa">
                         <barButtonItem key="leftBarButtonItem" id="8kk-fk-fIh"/>
                     </navigationItem>
                     <connections>
@@ -344,7 +351,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dcb-9X-lcj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7692.753623188406" y="93.75"/>
+            <point key="canvasLocation" x="5826" y="94"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="L2d-XE-dvT">
@@ -392,13 +399,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9oh-TT-BEg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4147.826086956522" y="489.50892857142856"/>
+            <point key="canvasLocation" x="3072" y="490"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="8Ir-5f-nVa"/>
+        <segue reference="jHi-TZ-COa"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <namedColor name="themeColor">
             <color red="0.99800002574920654" green="0.79600000381469727" blue="0.79600000381469727" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

@@ -18,6 +18,7 @@ class ShoeLibraryViewController: UIViewController {
     //var shoe = Shoe(brand: "adidas", retailPrice: 250, title: "yeezy", year: 2020, media: ["":""])
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var sortSegmentedControl: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +41,19 @@ class ShoeLibraryViewController: UIViewController {
 //        }
     }
     
+    func sortBasedOnSegmentPressed() {
+        switch sortSegmentedControl.selectedSegmentIndex {
+        case 0:
+            shoes.shoeArray.sort(by: {$0.title.lowercased() < $1.title.lowercased()})
+        case 1:
+            shoes.shoeArray.sort(by: {$0.retailPrice > $1.retailPrice})
+        case 2:
+            shoes.shoeArray.sort(by: {$0.retailPrice < $1.retailPrice})
+        default:
+            print("Error")
+        }
+        tableView.reloadData()
+    }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -50,6 +64,11 @@ class ShoeLibraryViewController: UIViewController {
             destination.shoe = shoes.shoeArray[selectedIndexPath.row]
         }
     }
+    
+    @IBAction func sortSegmentPressed(_ sender: UISegmentedControl) {
+        sortBasedOnSegmentPressed()
+    }
+    
 
 }
 

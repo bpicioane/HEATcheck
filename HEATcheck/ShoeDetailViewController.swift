@@ -23,9 +23,16 @@ class ShoeDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if (presentingViewController is UINavigationController) {
+//        if (presentingViewController is UINavigationController) {
+//
+//        }
+        if self.presentingViewController != nil{
+            backToHomeButton.isHidden = false
+            print("here")
+        } else {
             backToHomeButton.isHidden = true
             navigationItem.title = titles.randomElement()!
+            print("here2")
         }
         if shoe == nil {
             shoe = Shoe(brand: "", retailPrice: 1, title: "didn't work", year: 1, media: ["":""])

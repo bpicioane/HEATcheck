@@ -98,14 +98,11 @@
                         </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="C63-zd-6qs">
-                        <leftBarButtonItems>
-                            <barButtonItem title="Sign Out" id="hbe-Zx-pu1">
-                                <connections>
-                                    <segue destination="dUd-RM-BOr" kind="unwind" identifier="SignOutUnwind" animates="NO" unwindAction="unwindSignOutPressedWithSegue:" id="sD3-9k-1EP"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem title="Item" image="person.circle.fill" catalog="system" id="egG-cj-Fss"/>
-                        </leftBarButtonItems>
+                        <barButtonItem key="leftBarButtonItem" title="Sign Out" id="hbe-Zx-pu1">
+                            <connections>
+                                <segue destination="dUd-RM-BOr" kind="unwind" identifier="SignOutUnwind" animates="NO" unwindAction="unwindSignOutPressedWithSegue:" id="sD3-9k-1EP"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="awT-af-aon">
                             <connections>
                                 <segue destination="obw-MJ-CqV" kind="show" identifier="ScanBarcode" id="YOR-6u-reN"/>
@@ -306,7 +303,7 @@
                                 <color key="backgroundColor" name="themeColor"/>
                                 <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="50"/>
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="back to home"/>
+                                <state key="normal" title="save shoe"/>
                                 <connections>
                                     <action selector="backToHomeButtonPressed:" destination="bxW-lC-3VZ" eventType="touchUpInside" id="udF-7G-RfJ"/>
                                     <action selector="searchButtonPressed:" destination="pB0-1n-NFr" eventType="touchUpInside" id="OIf-Jb-Dot"/>
@@ -406,7 +403,6 @@
         <segue reference="jHi-TZ-COa"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <namedColor name="themeColor">
             <color red="0.99800002574920654" green="0.79600000381469727" blue="0.79600000381469727" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

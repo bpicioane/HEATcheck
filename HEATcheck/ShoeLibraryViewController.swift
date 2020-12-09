@@ -30,6 +30,7 @@ class ShoeLibraryViewController: UIViewController {
         tableView.delegate = self
         
         shoes.loadData {
+            self.shoes.shoeArray.sort(by: {$0.title.lowercased() < $1.title.lowercased()})
             self.tableView.reloadData()
         }
         
@@ -83,6 +84,5 @@ extension ShoeLibraryViewController: UITableViewDelegate, UITableViewDataSource 
         cell.detailTextLabel!.text = "$\(shoes.shoeArray[indexPath.row].retailPrice)"
         return cell
     }
-    
     
 }
